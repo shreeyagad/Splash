@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var moc
+    @EnvironmentObject var locationManager: LocationManager
+    @EnvironmentObject var viewRouter: ViewRouter
+    @State private var username: String = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        switch viewRouter.currentPage {
+        case .signInPage:
+            LoginView(username: $username).environmentObject(viewRouter)
+        case .homePage:
+            RoutesListView(username: $username)
+                .environment(\.managedObjectContext, moc)
+                .environmentObject(viewRouter)
+                .environmentObject(locationManager)
+        }
     }
 }

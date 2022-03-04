@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>993930481697-ucdjkb0d1ktgm6d8f1rr5h1i2ipucejv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.993930481697-ucdjkb0d1ktgm6d8f1rr5h1i2ipucejv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCFzSDiVJ6vp95PxEcRjr8lntCvEz71fI8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>993930481697</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>shreeyagad.Splash</string>
+	<key>PROJECT_ID</key>
+	<string>splash-46ece</string>
+	<key>STORAGE_BUCKET</key>
+	<string>splash-46ece.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:993930481697:ios:14d06d1b720c6ca4991360</string>
+</dict>
+</plist>

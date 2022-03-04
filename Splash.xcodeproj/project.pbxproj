@@ -11,6 +11,36 @@
 		9417D4FE27CEEC96005B0EC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417D4FD27CEEC96005B0EC7 /* ContentView.swift */; };
 		9417D50027CEEC98005B0EC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9417D4FF27CEEC98005B0EC7 /* Assets.xcassets */; };
 		9417D50327CEEC98005B0EC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9417D50227CEEC98005B0EC7 /* Preview Assets.xcassets */; };
+		9417D50A27CF14B4005B0EC7 /* RouteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417D50927CF14B4005B0EC7 /* RouteDetailView.swift */; };
+		9417D50D27CF14CA005B0EC7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9417D50B27CF14CA005B0EC7 /* Model.xcdatamodeld */; };
+		94B373D827CFF8F3006BAFCB /* RoutesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373D727CFF8F3006BAFCB /* RoutesListView.swift */; };
+		94B373DA27CFFA6D006BAFCB /* RouteEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373D927CFFA6D006BAFCB /* RouteEditView.swift */; };
+		94B373E327CFFCC6006BAFCB /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373DD27CFFCC6006BAFCB /* Location+CoreDataClass.swift */; };
+		94B373E427CFFCC6006BAFCB /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373DE27CFFCC6006BAFCB /* Location+CoreDataProperties.swift */; };
+		94B373E527CFFCC6006BAFCB /* Route+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373DF27CFFCC6006BAFCB /* Route+CoreDataClass.swift */; };
+		94B373E627CFFCC6006BAFCB /* Route+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373E027CFFCC6006BAFCB /* Route+CoreDataProperties.swift */; };
+		94B373E927D01620006BAFCB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373E827D01620006BAFCB /* DataController.swift */; };
+		94B373EB27D01AA6006BAFCB /* AutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373EA27D01AA6006BAFCB /* AutocompleteView.swift */; };
+		94B373ED27D01AC9006BAFCB /* SearchResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373EC27D01AC9006BAFCB /* SearchResultsViewModel.swift */; };
+		94B373EF27D01AEA006BAFCB /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373EE27D01AEA006BAFCB /* LocationViewModel.swift */; };
+		94B373F127D02708006BAFCB /* LocationSearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373F027D02708006BAFCB /* LocationSearchResultView.swift */; };
+		94B373F327D02756006BAFCB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373F227D02756006BAFCB /* LocationManager.swift */; };
+		94B373F527D0495A006BAFCB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373F427D0495A006BAFCB /* MapView.swift */; };
+		94B373F827D0A174006BAFCB /* FriendsRouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373F727D0A174006BAFCB /* FriendsRouteView.swift */; };
+		94B373FA27D0A55D006BAFCB /* RouteCompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B373F927D0A55D006BAFCB /* RouteCompareView.swift */; };
+		94B373FC27D0B3A5006BAFCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94B373FB27D0B3A5006BAFCB /* GoogleService-Info.plist */; };
+		94B3740527D0B508006BAFCB /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3740427D0B508006BAFCB /* ViewRouter.swift */; };
+		94B3740C27D0BB08006BAFCB /* FBLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3740B27D0BB08006BAFCB /* FBLoginView.swift */; };
+		94B3740F27D13877006BAFCB /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 94B3740E27D13877006BAFCB /* FacebookLogin */; };
+		94B3741227D13936006BAFCB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 94B3741127D13936006BAFCB /* FirebaseAuth */; };
+		94B3741627D13FD8006BAFCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3741527D13FD8006BAFCB /* AppDelegate.swift */; };
+		94B3741827D1426F006BAFCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3741727D1426F006BAFCB /* SceneDelegate.swift */; };
+		94B3741C27D163CE006BAFCB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3741B27D163CE006BAFCB /* LoginView.swift */; };
+		94B3742027D18B46006BAFCB /* FriendRouteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B3741F27D18B46006BAFCB /* FriendRouteCardView.swift */; };
+		94B9A57B27D191BF00C16730 /* RouteSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9A57A27D191BF00C16730 /* RouteSelectView.swift */; };
+		94B9A57D27D1928800C16730 /* RouteSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9A57C27D1928800C16730 /* RouteSelectorView.swift */; };
+		94B9A57F27D1931900C16730 /* RoutePickerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9A57E27D1931900C16730 /* RoutePickerCardView.swift */; };
+		94B9A58127D198E900C16730 /* MapDetourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B9A58027D198E900C16730 /* MapDetourView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +49,35 @@
 		9417D4FD27CEEC96005B0EC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9417D4FF27CEEC98005B0EC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9417D50227CEEC98005B0EC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9417D50927CF14B4005B0EC7 /* RouteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailView.swift; sourceTree = "<group>"; };
+		9417D50C27CF14CA005B0EC7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		94B373D727CFF8F3006BAFCB /* RoutesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesListView.swift; sourceTree = "<group>"; };
+		94B373D927CFFA6D006BAFCB /* RouteEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteEditView.swift; sourceTree = "<group>"; };
+		94B373DD27CFFCC6006BAFCB /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		94B373DE27CFFCC6006BAFCB /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		94B373DF27CFFCC6006BAFCB /* Route+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+CoreDataClass.swift"; sourceTree = "<group>"; };
+		94B373E027CFFCC6006BAFCB /* Route+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		94B373E827D01620006BAFCB /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = Models/DataController.swift; sourceTree = "<group>"; };
+		94B373EA27D01AA6006BAFCB /* AutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteView.swift; sourceTree = "<group>"; };
+		94B373EC27D01AC9006BAFCB /* SearchResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModel.swift; sourceTree = "<group>"; };
+		94B373EE27D01AEA006BAFCB /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		94B373F027D02708006BAFCB /* LocationSearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultView.swift; sourceTree = "<group>"; };
+		94B373F227D02756006BAFCB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		94B373F427D0495A006BAFCB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		94B373F627D094FA006BAFCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		94B373F727D0A174006BAFCB /* FriendsRouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRouteView.swift; sourceTree = "<group>"; };
+		94B373F927D0A55D006BAFCB /* RouteCompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCompareView.swift; sourceTree = "<group>"; };
+		94B373FB27D0B3A5006BAFCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		94B3740427D0B508006BAFCB /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		94B3740B27D0BB08006BAFCB /* FBLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginView.swift; sourceTree = "<group>"; };
+		94B3741527D13FD8006BAFCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94B3741727D1426F006BAFCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		94B3741B27D163CE006BAFCB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		94B3741F27D18B46006BAFCB /* FriendRouteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRouteCardView.swift; sourceTree = "<group>"; };
+		94B9A57A27D191BF00C16730 /* RouteSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSelectView.swift; sourceTree = "<group>"; };
+		94B9A57C27D1928800C16730 /* RouteSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSelectorView.swift; sourceTree = "<group>"; };
+		94B9A57E27D1931900C16730 /* RoutePickerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePickerCardView.swift; sourceTree = "<group>"; };
+		94B9A58027D198E900C16730 /* MapDetourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetourView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94B3740F27D13877006BAFCB /* FacebookLogin in Frameworks */,
+				94B3741227D13936006BAFCB /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +96,7 @@
 		9417D4EF27CEEC96005B0EC7 = {
 			isa = PBXGroup;
 			children = (
+				94B373FB27D0B3A5006BAFCB /* GoogleService-Info.plist */,
 				9417D4FA27CEEC96005B0EC7 /* Splash */,
 				9417D4F927CEEC96005B0EC7 /* Products */,
 			);
@@ -51,8 +113,33 @@
 		9417D4FA27CEEC96005B0EC7 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				94B373F627D094FA006BAFCB /* Info.plist */,
+				94B373E827D01620006BAFCB /* DataController.swift */,
+				94B373E727CFFDF3006BAFCB /* Models */,
 				9417D4FB27CEEC96005B0EC7 /* SplashApp.swift */,
 				9417D4FD27CEEC96005B0EC7 /* ContentView.swift */,
+				94B3741527D13FD8006BAFCB /* AppDelegate.swift */,
+				94B3741727D1426F006BAFCB /* SceneDelegate.swift */,
+				94B3740B27D0BB08006BAFCB /* FBLoginView.swift */,
+				94B3741F27D18B46006BAFCB /* FriendRouteCardView.swift */,
+				94B3741B27D163CE006BAFCB /* LoginView.swift */,
+				94B373D727CFF8F3006BAFCB /* RoutesListView.swift */,
+				94B373D927CFFA6D006BAFCB /* RouteEditView.swift */,
+				94B373EA27D01AA6006BAFCB /* AutocompleteView.swift */,
+				94B373F227D02756006BAFCB /* LocationManager.swift */,
+				94B373F027D02708006BAFCB /* LocationSearchResultView.swift */,
+				94B373EC27D01AC9006BAFCB /* SearchResultsViewModel.swift */,
+				94B9A58027D198E900C16730 /* MapDetourView.swift */,
+				94B373F727D0A174006BAFCB /* FriendsRouteView.swift */,
+				94B373EE27D01AEA006BAFCB /* LocationViewModel.swift */,
+				94B3740427D0B508006BAFCB /* ViewRouter.swift */,
+				94B373F927D0A55D006BAFCB /* RouteCompareView.swift */,
+				94B9A57A27D191BF00C16730 /* RouteSelectView.swift */,
+				94B9A57C27D1928800C16730 /* RouteSelectorView.swift */,
+				94B9A57E27D1931900C16730 /* RoutePickerCardView.swift */,
+				9417D50927CF14B4005B0EC7 /* RouteDetailView.swift */,
+				94B373F427D0495A006BAFCB /* MapView.swift */,
+				9417D50B27CF14CA005B0EC7 /* Model.xcdatamodeld */,
 				9417D4FF27CEEC98005B0EC7 /* Assets.xcassets */,
 				9417D50127CEEC98005B0EC7 /* Preview Content */,
 			);
@@ -65,6 +152,17 @@
 				9417D50227CEEC98005B0EC7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		94B373E727CFFDF3006BAFCB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94B373DD27CFFCC6006BAFCB /* Location+CoreDataClass.swift */,
+				94B373DE27CFFCC6006BAFCB /* Location+CoreDataProperties.swift */,
+				94B373DF27CFFCC6006BAFCB /* Route+CoreDataClass.swift */,
+				94B373E027CFFCC6006BAFCB /* Route+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +181,10 @@
 			dependencies = (
 			);
 			name = Splash;
+			packageProductDependencies = (
+				94B3740E27D13877006BAFCB /* FacebookLogin */,
+				94B3741127D13936006BAFCB /* FirebaseAuth */,
+			);
 			productName = Splash;
 			productReference = 9417D4F827CEEC96005B0EC7 /* Splash.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +213,10 @@
 				Base,
 			);
 			mainGroup = 9417D4EF27CEEC96005B0EC7;
+			packageReferences = (
+				94B3740D27D13877006BAFCB /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				94B3741027D13936006BAFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9417D4F927CEEC96005B0EC7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +233,7 @@
 			files = (
 				9417D50327CEEC98005B0EC7 /* Preview Assets.xcassets in Resources */,
 				9417D50027CEEC98005B0EC7 /* Assets.xcassets in Resources */,
+				94B373FC27D0B3A5006BAFCB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +244,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94B9A57B27D191BF00C16730 /* RouteSelectView.swift in Sources */,
+				94B373EB27D01AA6006BAFCB /* AutocompleteView.swift in Sources */,
 				9417D4FE27CEEC96005B0EC7 /* ContentView.swift in Sources */,
+				94B9A57D27D1928800C16730 /* RouteSelectorView.swift in Sources */,
+				94B3740527D0B508006BAFCB /* ViewRouter.swift in Sources */,
+				94B373DA27CFFA6D006BAFCB /* RouteEditView.swift in Sources */,
+				94B9A57F27D1931900C16730 /* RoutePickerCardView.swift in Sources */,
+				94B373D827CFF8F3006BAFCB /* RoutesListView.swift in Sources */,
+				94B373F127D02708006BAFCB /* LocationSearchResultView.swift in Sources */,
+				94B3741627D13FD8006BAFCB /* AppDelegate.swift in Sources */,
+				94B373E527CFFCC6006BAFCB /* Route+CoreDataClass.swift in Sources */,
+				94B3741827D1426F006BAFCB /* SceneDelegate.swift in Sources */,
+				94B3741C27D163CE006BAFCB /* LoginView.swift in Sources */,
+				94B373E427CFFCC6006BAFCB /* Location+CoreDataProperties.swift in Sources */,
+				94B9A58127D198E900C16730 /* MapDetourView.swift in Sources */,
+				94B373F327D02756006BAFCB /* LocationManager.swift in Sources */,
+				94B3742027D18B46006BAFCB /* FriendRouteCardView.swift in Sources */,
+				94B373EF27D01AEA006BAFCB /* LocationViewModel.swift in Sources */,
+				9417D50A27CF14B4005B0EC7 /* RouteDetailView.swift in Sources */,
+				94B373E627CFFCC6006BAFCB /* Route+CoreDataProperties.swift in Sources */,
 				9417D4FC27CEEC96005B0EC7 /* SplashApp.swift in Sources */,
+				94B3740C27D0BB08006BAFCB /* FBLoginView.swift in Sources */,
+				94B373E327CFFCC6006BAFCB /* Location+CoreDataClass.swift in Sources */,
+				94B373F827D0A174006BAFCB /* FriendsRouteView.swift in Sources */,
+				9417D50D27CF14CA005B0EC7 /* Model.xcdatamodeld in Sources */,
+				94B373F527D0495A006BAFCB /* MapView.swift in Sources */,
+				94B373E927D01620006BAFCB /* DataController.swift in Sources */,
+				94B373FA27D0A55D006BAFCB /* RouteCompareView.swift in Sources */,
+				94B373ED27D01AC9006BAFCB /* SearchResultsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +406,8 @@
 				DEVELOPMENT_TEAM = WUQQBA6N9L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Splash/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location to work.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +437,8 @@
 				DEVELOPMENT_TEAM = WUQQBA6N9L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Splash/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location to work.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +479,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		94B3740D27D13877006BAFCB /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		94B3741027D13936006BAFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		94B3740E27D13877006BAFCB /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94B3740D27D13877006BAFCB /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		94B3741127D13936006BAFCB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94B3741027D13936006BAFCB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		9417D50B27CF14CA005B0EC7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9417D50C27CF14CA005B0EC7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 9417D50C27CF14CA005B0EC7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9417D4F027CEEC96005B0EC7 /* Project object */;
 }
