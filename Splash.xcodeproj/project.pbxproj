@@ -120,25 +120,11 @@
 				9417D4FD27CEEC96005B0EC7 /* ContentView.swift */,
 				94B3741527D13FD8006BAFCB /* AppDelegate.swift */,
 				94B3741727D1426F006BAFCB /* SceneDelegate.swift */,
-				94B3740B27D0BB08006BAFCB /* FBLoginView.swift */,
-				94B3741F27D18B46006BAFCB /* FriendRouteCardView.swift */,
 				94B3741B27D163CE006BAFCB /* LoginView.swift */,
-				94B373D727CFF8F3006BAFCB /* RoutesListView.swift */,
-				94B373D927CFFA6D006BAFCB /* RouteEditView.swift */,
-				94B373EA27D01AA6006BAFCB /* AutocompleteView.swift */,
-				94B373F227D02756006BAFCB /* LocationManager.swift */,
-				94B373F027D02708006BAFCB /* LocationSearchResultView.swift */,
-				94B373EC27D01AC9006BAFCB /* SearchResultsViewModel.swift */,
-				94B9A58027D198E900C16730 /* MapDetourView.swift */,
-				94B373F727D0A174006BAFCB /* FriendsRouteView.swift */,
-				94B373EE27D01AEA006BAFCB /* LocationViewModel.swift */,
+				94B3740B27D0BB08006BAFCB /* FBLoginView.swift */,
+				94B9A58227D227B200C16730 /* FriendsView */,
+				94B9A58327D227D700C16730 /* RoutesView */,
 				94B3740427D0B508006BAFCB /* ViewRouter.swift */,
-				94B373F927D0A55D006BAFCB /* RouteCompareView.swift */,
-				94B9A57A27D191BF00C16730 /* RouteSelectView.swift */,
-				94B9A57C27D1928800C16730 /* RouteSelectorView.swift */,
-				94B9A57E27D1931900C16730 /* RoutePickerCardView.swift */,
-				9417D50927CF14B4005B0EC7 /* RouteDetailView.swift */,
-				94B373F427D0495A006BAFCB /* MapView.swift */,
 				9417D50B27CF14CA005B0EC7 /* Model.xcdatamodeld */,
 				9417D4FF27CEEC98005B0EC7 /* Assets.xcassets */,
 				9417D50127CEEC98005B0EC7 /* Preview Content */,
@@ -163,6 +149,36 @@
 				94B373E027CFFCC6006BAFCB /* Route+CoreDataProperties.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		94B9A58227D227B200C16730 /* FriendsView */ = {
+			isa = PBXGroup;
+			children = (
+				94B9A58027D198E900C16730 /* MapDetourView.swift */,
+				94B3741F27D18B46006BAFCB /* FriendRouteCardView.swift */,
+				94B373F727D0A174006BAFCB /* FriendsRouteView.swift */,
+				94B373F927D0A55D006BAFCB /* RouteCompareView.swift */,
+				94B9A57A27D191BF00C16730 /* RouteSelectView.swift */,
+				94B9A57C27D1928800C16730 /* RouteSelectorView.swift */,
+				94B9A57E27D1931900C16730 /* RoutePickerCardView.swift */,
+			);
+			path = FriendsView;
+			sourceTree = "<group>";
+		};
+		94B9A58327D227D700C16730 /* RoutesView */ = {
+			isa = PBXGroup;
+			children = (
+				94B373D727CFF8F3006BAFCB /* RoutesListView.swift */,
+				94B373D927CFFA6D006BAFCB /* RouteEditView.swift */,
+				94B373EA27D01AA6006BAFCB /* AutocompleteView.swift */,
+				94B373F227D02756006BAFCB /* LocationManager.swift */,
+				94B373F027D02708006BAFCB /* LocationSearchResultView.swift */,
+				94B373EC27D01AC9006BAFCB /* SearchResultsViewModel.swift */,
+				94B373EE27D01AEA006BAFCB /* LocationViewModel.swift */,
+				9417D50927CF14B4005B0EC7 /* RouteDetailView.swift */,
+				94B373F427D0495A006BAFCB /* MapView.swift */,
+			);
+			path = RoutesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
