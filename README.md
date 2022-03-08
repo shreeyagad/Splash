@@ -18,3 +18,5 @@ The app infrastructure was built using SwiftUI. I made extensive use of MapKit t
 ## What's next for Splash
 
 One potential feature would be adding integration with Apple Maps so the user can directly start their carpooling route from Splash. Another feature would be adding integration with Facebook Messenger so the user can send a message to their Facebook friend about carpooling from within the Splash app; this message would include the details of the carpooling route the user is interested in.
+
+## [Video Demo](https://www.youtube.com/watch?v=lZcYaUp4560)
