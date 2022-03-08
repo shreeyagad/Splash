@@ -78,6 +78,7 @@
 		94B9A57C27D1928800C16730 /* RouteSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSelectorView.swift; sourceTree = "<group>"; };
 		94B9A57E27D1931900C16730 /* RoutePickerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePickerCardView.swift; sourceTree = "<group>"; };
 		94B9A58027D198E900C16730 /* MapDetourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetourView.swift; sourceTree = "<group>"; };
+		94BA801D27D71B4200C18C57 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +97,6 @@
 		9417D4EF27CEEC96005B0EC7 = {
 			isa = PBXGroup;
 			children = (
-				94B373FB27D0B3A5006BAFCB /* GoogleService-Info.plist */,
 				9417D4FA27CEEC96005B0EC7 /* Splash */,
 				9417D4F927CEEC96005B0EC7 /* Products */,
 			);
@@ -113,6 +113,7 @@
 		9417D4FA27CEEC96005B0EC7 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				94B373FB27D0B3A5006BAFCB /* GoogleService-Info.plist */,
 				94B373F627D094FA006BAFCB /* Info.plist */,
 				94B373E827D01620006BAFCB /* DataController.swift */,
 				94B373E727CFFDF3006BAFCB /* Models */,
@@ -125,6 +126,7 @@
 				94B9A58227D227B200C16730 /* FriendsView */,
 				94B9A58327D227D700C16730 /* RoutesView */,
 				94B3740427D0B508006BAFCB /* ViewRouter.swift */,
+				94BA801D27D71B4200C18C57 /* README.md */,
 				9417D50B27CF14CA005B0EC7 /* Model.xcdatamodeld */,
 				9417D4FF27CEEC98005B0EC7 /* Assets.xcassets */,
 				9417D50127CEEC98005B0EC7 /* Preview Content */,
