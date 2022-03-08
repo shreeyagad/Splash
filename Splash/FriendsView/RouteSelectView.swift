@@ -13,16 +13,22 @@ struct RouteSelectView: View {
     @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var locationManager: LocationManager
     @ObservedObject var theirRoute: Route
+    
     @Binding var isPresentingCompareView: Bool
     @State private var isPresentingMapView: Bool = false
-    @State private var myRoute: Route = Route()
+    
     @State private var isDriver: Bool = true
     @State private var isMapDriver: Bool = true
+    
+    @State private var myRoute: Route = Route()
+    @State private var selectedRoute: Bool = false
+    
     @State private var iDriveTime: Double = 0
     @State private var iDriveDistance: Double = 0
+    
     @State private var theyDriveTime: Double = 0
     @State private var theyDriveDistance: Double = 0
-    @State private var selectedRoute: Bool = false
+    
     @State private var detourTime: Double = 0
     @State private var detourDistance: Double = 0
     
@@ -59,68 +65,42 @@ struct RouteSelectView: View {
         }
     }
     
-    func calculateTimesAndDistances(coord1: CLLocationCoordinate2D?, coord2: CLLocationCoordinate2D?, coord3: CLLocationCoordinate2D?, coord4: CLLocationCoordinate2D?) async {
-        let stop1 = MKPlacemark(coordinate: coord1!)
-        let stop2 = MKPlacemark(coordinate: coord2!)
-        let stop3 = MKPlacemark(coordinate: coord3!)
-        let stop4 = MKPlacemark(coordinate: coord4!)
+    // helper function for calculateTimesAndDistances
+    func createDirections(start: MKPlacemark, end: MKPlacemark) -> MKDirections {
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: start)
+        request.destination = MKMapItem(placemark: end)
+        request.requestsAlternateRoutes = true
+        request.transportType = .automobile
+        return MKDirections(request: request)
+    }
+    
+    func calculateTimesAndDistances() async {
+        guard let myStartLocation = myRoute.startLocation?.coordinate else {return}
+        guard let theirStartLocation = theirRoute.startLocation?.coordinate else {return}
+        guard let myEndLocation = myRoute.endLocation?.coordinate else {return}
+        guard let theirEndLocation = theirRoute.endLocation?.coordinate else {return}
         
-        // route 1: stop 2 -> stop 1 -> stop 3 -> stop 4
-        // 3 requests
-        let request1 = MKDirections.Request()
-        let request2 = MKDirections.Request()
-        let request3 = MKDirections.Request()
+        let stop1 = MKPlacemark(coordinate: myStartLocation)
+        let stop2 = MKPlacemark(coordinate: theirStartLocation)
+        let stop3 = MKPlacemark(coordinate: myEndLocation)
+        let stop4 = MKPlacemark(coordinate: theirEndLocation)
         
-        request1.source = MKMapItem(placemark: stop2)
-        request1.destination = MKMapItem(placemark: stop1)
-        request1.requestsAlternateRoutes = true
-        request1.transportType = .automobile
+        // route 1: stop 1 -> stop 2 -> stop 4 -> stop 3
+        let directions1 = createDirections(start: stop1, end: stop2)
+        let directions2 = createDirections(start: stop2, end: stop4)
+        let directions3 = createDirections(start: stop4, end: stop3)
         
-        request2.source = MKMapItem(placemark: stop1)
-        request2.destination = MKMapItem(placemark: stop3)
-        request2.requestsAlternateRoutes = true
-        request2.transportType = .automobile
+        // route 2: stop 2 -> stop 1 -> stop 3 -> stop 4
+        let directions4 = createDirections(start: stop2, end: stop1)
+        let directions5 = createDirections(start: stop1, end: stop3)
+        let directions6 = createDirections(start: stop3, end: stop4)
         
-        request3.source = MKMapItem(placemark: stop3)
-        request3.destination = MKMapItem(placemark: stop4)
-        request3.requestsAlternateRoutes = true
-        request3.transportType = .automobile
+        let directionsIDrive = [directions1, directions2, directions3]
+        let directionsTheyDrive = [directions4, directions5, directions6]
         
-        let directions1 = MKDirections(request: request1)
-        let directions2 = MKDirections(request: request2)
-        let directions3 = MKDirections(request: request3)
-        
-        // route 2: stop 1 -> stop 2 -> stop 4 -> stop 3
-        // 3 requests
-        let request4 = MKDirections.Request()
-        let request5 = MKDirections.Request()
-        let request6 = MKDirections.Request()
-        
-        request4.source = MKMapItem(placemark: stop1)
-        request4.destination = MKMapItem(placemark: stop2)
-        request4.requestsAlternateRoutes = true
-        request4.transportType = .automobile
-        
-        request5.source = MKMapItem(placemark: stop2)
-        request5.destination = MKMapItem(placemark: stop4)
-        request5.requestsAlternateRoutes = true
-        request5.transportType = .automobile
-        
-        request6.source = MKMapItem(placemark: stop4)
-        request6.destination = MKMapItem(placemark: stop3)
-        request6.requestsAlternateRoutes = true
-        request6.transportType = .automobile
-        
-        let directions4 = MKDirections(request: request4)
-        let directions5 = MKDirections(request: request5)
-        let directions6 = MKDirections(request: request6)
-        
-        let directionsTheyDrive = [directions1, directions2, directions3]
-        let directionsIDrive = [directions4, directions5, directions6]
         iDriveTime = 0
         iDriveDistance = 0
-        theyDriveTime = 0
-        theyDriveDistance = 0
         for direction in directionsIDrive {
             direction.calculate { response, error in
                 guard let wrappedResponse = response else { return }
@@ -209,7 +189,7 @@ struct RouteSelectView: View {
             async {
                 selectedRoute = true
                 isPresentingMapView = true
-                await calculateTimesAndDistances(coord1: myRoute.startLocation?.coordinate, coord2: theirRoute.startLocation?.coordinate, coord3: myRoute.endLocation?.coordinate, coord4: theirRoute.endLocation?.coordinate)
+                await calculateTimesAndDistances()
                 detourTime = calculateDetourTime(isDriver: isDriver)
                 detourDistance = calculateDetourDistance(isDriver: isDriver)
             }

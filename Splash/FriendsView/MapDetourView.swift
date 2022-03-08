@@ -19,28 +19,32 @@ struct MapDetourView: UIViewRepresentable {
     
     let myMap = MKMapView()
     
+    // helper function for updateUIView
+    func createAnnotationFromRoute(route: Route, start: Bool = true) -> MKPointAnnotation {
+        let stop = MKPointAnnotation()
+        let location: Location?
+        if start {
+            location = route.startLocation
+        }
+        else {
+            location = route.endLocation
+        }
+        stop.title = location?.name ?? ""
+        stop.subtitle = location?.address ?? ""
+        stop.coordinate = location?.coordinate ?? CLLocationCoordinate2D()
+        return stop
+    }
+    
     func updateUIView(_ uiView: MKMapView, context: Context) {
         uiView.removeAnnotations(uiView.annotations)
         var startingAnnotations: [MKPointAnnotation] = []
-        let stop1 = MKPointAnnotation()
-        stop1.title = myRoute.startLocation?.name ?? ""
-        stop1.subtitle = myRoute.startLocation?.address ?? ""
-        stop1.coordinate = myRoute.startLocation?.coordinate ?? CLLocationCoordinate2D()
-        let stop2 = MKPointAnnotation()
-        stop2.title = theirRoute.startLocation?.name ?? ""
-        stop2.subtitle = theirRoute.startLocation?.address ?? ""
-        stop2.coordinate = theirRoute.startLocation?.coordinate ?? CLLocationCoordinate2D()
+        let stop1 = createAnnotationFromRoute(route: myRoute)
+        let stop2 = createAnnotationFromRoute(route: theirRoute)
         startingAnnotations.append(contentsOf: [stop1, stop2])
         
         var endingAnnotations: [MKPointAnnotation] = []
-        let stop3 = MKPointAnnotation()
-        stop3.title = myRoute.endLocation?.name ?? ""
-        stop3.subtitle = myRoute.endLocation?.address ?? ""
-        stop3.coordinate = myRoute.endLocation?.coordinate ?? CLLocationCoordinate2D()
-        let stop4 = MKPointAnnotation()
-        stop4.title = theirRoute.endLocation?.name ?? ""
-        stop4.subtitle = theirRoute.endLocation?.address ?? ""
-        stop4.coordinate = theirRoute.endLocation?.coordinate ?? CLLocationCoordinate2D()
+        let stop3 = createAnnotationFromRoute(route: myRoute, start: false)
+        let stop4 = createAnnotationFromRoute(route: myRoute, start: false)
         endingAnnotations.append(contentsOf: [stop3, stop4])
     
         uiView.addAnnotations(startingAnnotations)
@@ -48,66 +52,42 @@ struct MapDetourView: UIViewRepresentable {
         makeRoute(startingAnnotations: startingAnnotations, endingAnnotations: endingAnnotations)
     }
     
+    // helper function for makeRoute
+    func createDirections(start: MKPlacemark, end: MKPlacemark) -> MKDirections {
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: start)
+        request.destination = MKMapItem(placemark: end)
+        request.requestsAlternateRoutes = true
+        request.transportType = .automobile
+        return MKDirections(request: request)
+    }
+    
     func makeRoute(startingAnnotations: [MKPointAnnotation], endingAnnotations: [MKPointAnnotation]) {
         let stop1 = MKPlacemark(coordinate: startingAnnotations[0].coordinate)
         let stop2 = MKPlacemark(coordinate: startingAnnotations[1].coordinate)
         let stop3 = MKPlacemark(coordinate: endingAnnotations[0].coordinate)
         let stop4 = MKPlacemark(coordinate: endingAnnotations[1].coordinate)
+        var directions: [MKDirections] = []
         
-        var request1 = MKDirections.Request()
-        var request2 = MKDirections.Request()
-        var request3 = MKDirections.Request()
         if isDriver {
             // route 1: stop 2 -> stop 1 -> stop 3 -> stop 4
-            // 3 requests
-            
-            request1.source = MKMapItem(placemark: stop1)
-            request1.destination = MKMapItem(placemark: stop2)
-            request1.requestsAlternateRoutes = true
-            request1.transportType = .automobile
-            
-            request2.source = MKMapItem(placemark: stop2)
-            request2.destination = MKMapItem(placemark: stop4)
-            request2.requestsAlternateRoutes = true
-            request2.transportType = .automobile
-            
-            request3.source = MKMapItem(placemark: stop4)
-            request3.destination = MKMapItem(placemark: stop3)
-            request3.requestsAlternateRoutes = true
-            request3.transportType = .automobile
+            let directions1 = createDirections(start: stop2, end: stop1)
+            let directions2 = createDirections(start: stop1, end: stop3)
+            let directions3 = createDirections(start: stop3, end: stop4)
+            directions = [directions1, directions2, directions3]
         }
         
         else {
-        // route 2: stop 1 -> stop 2 -> stop 4 -> stop 3
-        // 3 requests
-            request1.source = MKMapItem(placemark: stop2)
-            request1.destination = MKMapItem(placemark: stop1)
-            request1.requestsAlternateRoutes = true
-            request1.transportType = .automobile
-            
-            request2.source = MKMapItem(placemark: stop1)
-            request2.destination = MKMapItem(placemark: stop3)
-            request2.requestsAlternateRoutes = true
-            request2.transportType = .automobile
-            
-            request3.source = MKMapItem(placemark: stop3)
-            request3.destination = MKMapItem(placemark: stop4)
-            request3.requestsAlternateRoutes = true
-            request3.transportType = .automobile
-            
+            // route 2: stop 1 -> stop 2 -> stop 4 -> stop 3
+            let directions1 = createDirections(start: stop1, end: stop2)
+            let directions2 = createDirections(start: stop2, end: stop4)
+            let directions3 = createDirections(start: stop4, end: stop3)
+            directions = [directions1, directions2, directions3]
         }
-        
-        var directions1 = MKDirections(request: request1)
-        var directions2 = MKDirections(request: request2)
-        var directions3 = MKDirections(request: request3)
-        
-        let directions = [directions1, directions2, directions3]
         
         for direction in directions {
             direction.calculate { response, error in
                 guard let wrappedResponse = response else { return }
-                
-                //for getting just one route
                 if let routeResponse = wrappedResponse.routes.first {
                     if isDriver {
                         routeResponse.polyline.title = "myRoute"

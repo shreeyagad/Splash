@@ -14,7 +14,7 @@ struct FriendsRouteView: View {
     @State private var routeName: String = ""
     
     var body: some View {
-        var routes = Route.sampleData(moc: moc)
+        let routes = Route.sampleData(moc: moc)
         return List {
             ForEach(routes, id: \.id) { route in 
                 NavigationLink(destination:

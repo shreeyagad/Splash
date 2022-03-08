@@ -25,13 +25,6 @@ struct RouteDetailView: View {
                 Text(route.endLocation?.name ?? "")
                 Text(route.endLocation?.address ?? "").foregroundColor(.secondary)
             }
-//            Section(header: Text("Coordinates")) {
-//                Text("\(route.startLocation?.coordinate.latitude ?? 0)")
-//                Text("\(route.startLocation?.coordinate.longitude ?? 0)")
-//                Text("\(route.endLocation?.coordinate.latitude ?? 0)")
-//                Text("\(route.endLocation?.coordinate.longitude ?? 0)")
-//
-//            }
             Section(header: Text("Route Details")) {
                 Text("\(Double(round(route.expectedTravelTime / 60 * 10) / 10), specifier: "%.1f") minutes")
                 Text("\(Double(round(route.distance / 1609 * 10) / 10), specifier: "%.1f") miles").foregroundColor(.secondary)

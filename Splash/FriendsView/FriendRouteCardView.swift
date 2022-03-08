@@ -19,7 +19,6 @@ struct FriendRouteCardView: View {
                     Text("\(route.startLocation?.name ?? "")").font(.caption).foregroundColor(.secondary)
                     Text("\(route.endLocation?.name ?? "")").font(.caption).foregroundColor(.secondary)
                 }
-//                Text("\(route.startLocation?.name ?? "") ➡️ \(route.endLocation?.name ?? "")").font(.caption).foregroundColor(.secondary)
                 Spacer()
                 VStack {
                     Text("👤 \(route.username ?? "")").font(.caption).foregroundColor(.secondary)

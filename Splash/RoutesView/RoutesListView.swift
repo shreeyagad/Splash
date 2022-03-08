@@ -52,7 +52,6 @@ struct RoutesListView: View {
                         logged = false
                     })
                     {
-    //                    Text("Log out")
                         Label("Log Out", systemImage: "arrow.right.to.line").labelStyle(CustomLabelStyle())
                     }
                 }.background(Color("ListBGColor"))
