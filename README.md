@@ -1,7 +1,9 @@
 # Splash
 
- An iOS app that coordinates carpool for you and your Facebook friends.<br>
-[*Submitted to 2022 Hoboken Climate Hackathon*]
+_An iOS app that coordinates carpool for you and your Facebook friends._
+
+## Awards
+[**3rd Place @ 2022 Hoboken Climate Hackathon**](https://devpost.com/software/splash-uaxpfv)
 
 ## Inspiration
 
